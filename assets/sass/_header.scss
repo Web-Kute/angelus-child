@@ -184,18 +184,12 @@ a {
         font-size: 2.875em;
         margin: 0 0 1rem;
     }
-
-    .btn-secondary {
-        &:hover {
-            background-color: $colorLink;
-        }
-    }
 }
 
 .modal-footer {
     .btn-secondary {
         &:hover {
-            background-color: $colorMain;
+            background-color: $colorLink;
         }
     }
 }

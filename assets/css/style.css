@@ -2234,12 +2234,8 @@ a:hover {
   margin: 0 0 1rem;
 }
 
-#modal-home .btn-secondary:hover {
-  background-color: #025E73;
-}
-
 .modal-footer .btn-secondary:hover {
-  background-color: #05407a;
+  background-color: #025E73;
 }
 
 h1 {
