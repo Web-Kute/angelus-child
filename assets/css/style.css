@@ -856,6 +856,15 @@ ul.activity-fare li a:before {
   position: relative;
   z-index: 100;
   width: 100%;
+  transition-duration: 500ms;
+}
+
+#box-partners.active {
+  height: 0;
+}
+
+#box-partners.active #partners {
+  display: none;
 }
 
 .btn-open {
@@ -902,14 +911,80 @@ ul.activity-fare li a:before {
   background-position: center center;
 }
 
+/* Partenaires */
+#box-partners {
+  position: absolute;
+  bottom: 30px;
+  height: 0;
+  width: 100%;
+  transition-duration: 500ms;
+}
+
+#box-partners.active {
+  height: 959px;
+}
+
+#box-partners.active #partners {
+  opacity: 1;
+}
+
+.btn-open {
+  font-size: 1rem;
+  height: 30px;
+  color: #FFFFFF;
+  padding: 0 60px;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  background-color: #05407a;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-open:hover {
+  /*color: $colorSecondary;*/
+  background-color: #B4C712;
+}
+
+.open-partners {
+  cursor: pointer;
+}
+
+.open-partners:before {
+  content: "";
+  position: absolute;
+  left: 0.5em;
+  width: 2em;
+  height: 2em;
+  background-image: url(/wp-content/themes/angelus-plongee-child/assets/icons/minus-circle.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.close-partners:before {
+  content: "";
+  position: absolute;
+  left: 0.5em;
+  width: 2em;
+  height: 2em;
+  background-image: url(/wp-content/themes/angelus-plongee-child/assets/icons/plus-circle.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
 #partners {
   padding: 2rem 1rem 0;
   display: none;
-  position: absolute;
+  opacity: 0;
+  transition-duration: 1500ms;
   bottom: 30px;
   z-index: 5;
   background-color: #FFFFFF;
   border-top: 1px solid #05407a;
+}
+
+#partners.show {
+  display: block;
 }
 
 #partners .row {
@@ -955,7 +1030,7 @@ ul.activity-fare li a:before {
   color: #B4C712;
 }
 
-#partners .close-cross {
+#partners #close-cross {
   height: 40px;
   width: 40px;
   border-radius: 50%;
@@ -965,14 +1040,14 @@ ul.activity-fare li a:before {
   right: 50%;
   transform: translateX(50%);
   top: -25px;
-  font-size: .5rem;
+  font-size: 0.5rem;
   transition: all 0.2s;
   background-color: #FFFFFF;
   color: #05407a;
   border-top: 1px solid #05407a;
 }
 
-#partners .close-cross:hover {
+#partners #close-cross:hover {
   color: #B4C712;
 }
 
@@ -2235,7 +2310,7 @@ a:hover {
 }
 
 .modal-footer .btn-secondary:hover {
-  background-color: #025E73;
+  background-color: #B4C712;
 }
 
 h1 {
